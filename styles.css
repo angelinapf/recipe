@@ -54,16 +54,6 @@ p {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  div.recipe-two{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @media screen and (max-width: 480px) {
   div.navbar {
     display: none;
