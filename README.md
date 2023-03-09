@@ -1,7 +1,5 @@
 # Recept
 Länk till allt 
- l
- v
 
 ## Planering
 
