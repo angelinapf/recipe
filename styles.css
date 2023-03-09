@@ -1,0 +1,383 @@
+body {
+  background-color: #f5f1edff;
+  display: grid;
+}
+
+h1,
+h2,
+a,
+p {
+  font-family: "IBM Plex Serif", serif;
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f5f1edff;
+  min-width: 481px;
+  position: fixed;
+  transition: top 0.3s;
+  box-shadow: 4px 2px 4px 0 grey;
+}
+.navbar img {
+  height: auto;
+  width: 100px;
+  margin-left: 7%;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a {
+  font-family: "IBM Plex Serif", serif;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #709255ff;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  div.recipe-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div.navbar {
+    display: none;
+  }
+  div.footer {
+    display: none;
+  }
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+  }
+  div.recipe-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.intro-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.intro-right {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  div.recipe-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media screen and (min-width: 481px) {
+  div.mobile-container {
+    display: none;
+  }
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: white;
+  height: auto;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.mobile-navbar {
+  overflow: hidden;
+  background-color: rgb(155, 168, 145);
+  position: relative;
+}
+
+.mobile-navbar #myLinks {
+  display: none;
+}
+
+.mobile-navbar a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.mobile-navbar a.icon {
+  background: rgb(155, 168, 145);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.mobile-navbar a:hover {
+  background-color: rgb(155, 168, 145);
+  color: black;
+}
+
+.active {
+  background-color: white;
+  color: white;
+}
+
+main {
+  width: 95%;
+  margin-top: 121px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main h1 {
+  text-align: center;
+  color: #f5f1edff;
+}
+
+main img {
+  border: 10px rgb(108, 158, 151);
+  border-radius: 2px;
+}
+
+.recipe-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.intro-left {
+  grid-column: 1/2;
+  background-color: #709255ff;
+  align-items: center;
+  margin-right: 5px;
+  border: #3e5622ff 5px outset;
+}
+
+.intro-left img {
+  border: white 2px dotted;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.intro-left h1 {
+  box-shadow: 0 2px 4px 0 #3e5622ff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  text-align: center;
+  margin-top: 1px;
+}
+.recipe-icons p,
+h5 {
+  font-size: 1rem;
+  color: white;
+  margin-top: 1%;
+}
+
+.recipe-icons i {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 7%;
+}
+
+.intro-right {
+  background-color: #709255ff;
+  align-items: center;
+  grid-column: 2/2;
+  margin-left: 5px;
+  border: #3e5622ff 5px outset;
+  padding: 10px;
+}
+
+.intro-right p {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+}
+
+.recipe-two{
+  display: grid;
+  grid-template-columns: 1fr, 1.5fr;
+}
+
+.two-left{
+  grid-column: 1/2;
+  background-color: #709255ff;
+  align-items: center;
+  margin-right: 5px;
+  margin-top: 10px;
+  border: #3e5622ff 5px outset;
+}
+
+.two-left ul li{
+  list-style-type: circle;
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.two-left h2{
+  color: white;
+  text-align: center;
+}
+
+.two-right{
+  grid-column: 2/2;
+  list-style-type: circle;
+  padding: 5px;
+  background-color: #709255ff;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 10px;
+  border: #3e5622ff 5px outset;
+}
+
+.two-right ul li{
+  list-style-type: circle;
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.two-right h2{
+  color: white;
+  text-align: center;
+}
+
+.about{
+  margin-top: 100px;
+}
+.about h2 p{
+  text-align: center;
+}
+
+.other{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact{
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.footer {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #f5f1edff;
+  min-width: 481px;
+  box-shadow: 0 2px 4px 0 grey;
+}
+.footer img {
+  margin-right: 7%;
+  height: 120px;
+  width: auto;
+}
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.footer ul li a {
+  font-family: "IBM Plex Serif", serif;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+.footer ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #709255ff;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.footer ul li:hover::after {
+  width: 100%;
+}
+
+/* main h1{
+  color: #337357;
+  text-align: center;
+  font-size: 50px;
+
+}
+main h2{
+  color: #337357;
+  font-size: 35px;
+
+}
+main img{
+  margin-left: auto;
+  margin-right: auto;
+}
+*/
+
+/* COLORS
+--atomic-tangerine: #f79256ff;
+--deep-champagne: #fbd1a2ff;
+--middle-blue-green: #7dcfb6ff;
+--pacific-blue: #00b2caff;
+--yale-blue: #1d4e89ff; 
+
+  CSS HEX
+--charleston-green: #0b2027ff;
+--teal-blue: #40798cff;
+--green-sheen: #70a9a1ff;
+--ash-gray: #cfd7c7ff;
+--cornsilk: #f6f1d1ff; */
